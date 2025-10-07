@@ -1,0 +1,30 @@
+html {
+  font-size: 16px;
+}
+
+h1 img {
+  height: 56px;
+}
+
+section p {
+  margin-left: 1rem;
+}
+
+.s0-hero {
+  background-image: url('../images/header_back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-instagram {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 4px !important;
+}
+
+@media (min-width: 768px) {
+  header, nav {
+    padding-top: 1rem !important;
+  }
+}
+
