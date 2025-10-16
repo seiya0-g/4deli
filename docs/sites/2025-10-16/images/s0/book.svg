@@ -1,9 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
 <title>Book Icon</title>
 <metadata>{"creator":"seiya0","license":"All Rights Reserved","source":"https://github.com/seiya0-g"}</metadata>
-<rect width="64" height="64" fill="none"/>
-<g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
-<path d="M6 14v36c8-4 16-4 26 0V14c-10-4-18-4-26 0z"/>
-<path d="M58 14v36c-8-4-16-4-26 0V14c10-4 18-4 26 0z"/>
-</g>
+<path d="M3 8v48c9-5 18-5 30 0V8c-12-5-21-5-30 0z"/>
+<path d="M62 8v48c-9-5-18-5-30 0V8c12-5 21-5 30 0z"/>
 </svg>

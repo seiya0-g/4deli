@@ -13,6 +13,12 @@
   <link rel="stylesheet" href="css/base/s0.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/base/s0.js"></script>
+  <style>
+    section {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,17 +33,29 @@
     <nav>
       <ul>
         <li><a href="index.html#top" aria-label="Home"><img src="images/s0/home.svg" alt=""><span>Home</span></a></li>
-        <li><a href="index.html#concept" aria-label="Concept"><img src="images/s0/concept.svg" alt=""><span>Concept</span></a></li>
-        <li><a href="index.html#take-out" aria-label="Takeout"><img src="images/s0/take-out.svg" alt=""><span>Takeout</span></a></li>
-        <li><a href="index.html#eat-in" aria-label="Eat in"><img src="images/s0/eat-in.svg" alt=""><span>Eat in</span></a></li>
+        <li><a href="index.html#about" aria-label="About"><img src="images/s0/info.svg" alt=""><span>About</span></a></li>
+        <li><a href="index.html#menu" aria-label="Menu"><img src="images/s0/book.svg" alt=""><span>Menu</span></a></li>
         <li><a href="access.html" aria-label="Access"><img src="images/s0/pin.svg" alt=""><span>Access</span></a></li>
         <li><a href="contact.html" aria-label="Contact"><img src="images/s0/contact.svg" alt=""><span>Contact</span></a></li>
       </ul>
     </nav>
     <main>
-      <section style="padding-bottom: 1000px;">
+      <section>
         <h2 class="s0-line-title s0-mb-3">お問い合わせ</h2>
-        <p>TODO</p>
+        <form>
+          <p>ご質問・ご要望などございましたら、下記のフォームよりお気軽にお問い合わせください。</p>
+          <div class="s0-form-table">
+            <label for="name">Name<span class="s0-required" aria-label="必須">*</span></label>
+            <input type="text" id="name" name="name" placeholder="お名前" autocomplete="name" required>
+            <label for="email">Email<span class="s0-required" aria-label="必須">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Eメールアドレス" autocomplete="email" required>
+            <label for="message">メッセージ<span class="s0-required" aria-label="必須">*</span></label>
+            <textarea id="message" name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
+          </div>
+          <div style="text-align: right;">
+            <button type="submit" class="s0-button">送信</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>

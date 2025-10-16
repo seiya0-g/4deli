@@ -6,21 +6,21 @@
  */
 :root {
   --s0-primary: #0d6efd;
-  --s0-secondary: #6c757d;
+  --s0-primary-rgb: 13, 110, 253;
+  --s0-secondary: #696969;
   --s0-body-color: #222222;
   --s0-body-bg: #f5f5f5;
   --s0-body-bg-rgb: 248, 245, 227;
-  --s0-body-font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Noto Sans JP",
-    "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック体", "Yu Gothic",
-    "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
-    "Noto Sans CJK JP", "TakaoGothic", "IPAexGothic",
-    sans-serif;
+  --s0-body-font-family: system-ui, -apple-system, "Segoe UI", "Roboto",
+    "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN",
+    "游ゴシック体", "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+    "MS PGothic", "Noto Sans CJK JP", "TakaoGothic", "IPAexGothic", sans-serif;
   --s0-body-font-size: 1rem;
   --s0-body-font-weight: 400;
   --s0-body-line-height: 1.5;
-  --s0-header-height: 52px;
-  --s0-bottom-nav-height: 52px;
-  --s0-bottom-nav-img-size: 32px;
+  --s0-tap-size: 44px;
+  --s0-header-height: 68px;
+  --s0-bottom-nav-height: 68px;
   --s0-line-title-color: var(--s0-body-color);
 }
 
@@ -32,15 +32,10 @@ body {
   font-weight: var(--s0-body-font-weight);
   line-height: var(--s0-body-line-height);
   color: var(--s0-body-color);
-  text-shadow:
-    1px 1px 0 var(--s0-body-bg),
-    -1px -1px 0 var(--s0-body-bg),
-    1px -1px 0 var(--s0-body-bg),
-    -1px 1px 0 var(--s0-body-bg),
-    0 1px 0 var(--s0-body-bg),
-    0 -1px 0 var(--s0-body-bg),
-    1px 0 0 var(--s0-body-bg),
-    -1px 0 0 var(--s0-body-bg);
+  text-shadow: 1px 1px 0 var(--s0-body-bg), -1px -1px 0 var(--s0-body-bg),
+    1px -1px 0 var(--s0-body-bg), -1px 1px 0 var(--s0-body-bg),
+    0 1px 0 var(--s0-body-bg), 0 -1px 0 var(--s0-body-bg),
+    1px 0 0 var(--s0-body-bg), -1px 0 0 var(--s0-body-bg);
   background-color: var(--s0-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -60,7 +55,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 h1 img {
@@ -77,24 +72,18 @@ h3 {
   font-size: 1.125rem;
 }
 
-.s0-layout-top {
-  display: grid;
-  grid-template-areas: "center";
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  min-height: 100vh;
-  min-height: 100svh;
+section {
+  scroll-behavior: smooth;
 }
 
-.s0-layout-top>header {
-  grid-area: header;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  z-index: 100;
-  background-color: var(--s0-body-bg);
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id],
+section[id] {
+  scroll-margin-top: var(--s0-header-height);
 }
 
 .s0-layout {
@@ -121,7 +110,6 @@ h3 {
   background-color: var(--s0-body-bg);
 }
 
-.s0-layout-top>nav,
 .s0-layout>nav {
   grid-area: nav;
   position: sticky;
@@ -136,7 +124,6 @@ h3 {
   background-color: var(--s0-body-bg);
 }
 
-.s0-layout-top>nav>ul,
 .s0-layout>nav>ul {
   margin: 0;
   padding: 0;
@@ -149,22 +136,28 @@ h3 {
   z-index: 1000;
 }
 
-.s0-layout-top>nav>ul>li>a,
-.s0-layout>nav>ul>li>a {
+.s0-layout>nav>ul>li {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: var(--s0-bottom-nav-height);
-  height: var(--s0-bottom-nav-height);
-  text-decoration: none;
-  font-size: 12px;
+  align-items: center;
 }
 
-.s0-layout-top>nav>ul>li>a:link,
-.s0-layout-top>nav>ul>li>a:visited,
-.s0-layout-top>nav>ul>li>a:hover,
-.s0-layout-top>nav>ul>li>a:active,
+.s0-layout>nav>ul>li>a {
+  position: relative;
+  display: inline-block;
+  margin: 12px;
+  padding: 0;
+  width: var(--s0-tap-size);
+  height: var(--s0-tap-size);
+  font-size: 12px;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 .s0-layout>nav>ul>li>a:link,
 .s0-layout>nav>ul>li>a:visited,
 .s0-layout>nav>ul>li>a:hover,
@@ -172,18 +165,27 @@ h3 {
   color: var(--s0-body-color);
 }
 
+.s0-layout>nav>ul>li>a:focus-visible {
+  border: 1px solid var(--s0-primary);
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
+}
+
 .s0-layout>nav>ul>li>a>img {
-  position: relative;
-  top: 4px;
-  margin: 0;
+  position: absolute;
+  top: 2px;
   padding: 0;
-  width: var(--s0-bottom-nav-img-size);
-  height: var(--s0-bottom-nav-img-size);
+  width: 100%;
+  height: calc(var(--s0-tap-size) - 18px);
 }
 
 .s0-layout>nav>ul>li>a>span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
   white-space: nowrap;
   font-size: 12px;
   font-weight: 700;
@@ -202,6 +204,83 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.s0-form-table {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.s0-form-table>* {
+  margin-bottom: 1.5em;
+}
+
+.s0-form-table>label {
+  display: flex;
+  margin: 0;
+  padding: 4px;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.s0-form-table input[type="text"],
+.s0-form-table input[type="email"],
+.s0-form-table textarea {
+  min-height: 44px;
+  width: 100%;
+  margin: 8px;
+  padding: 0.5em;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.s0-form-table input[type="text"]:focus-visible,
+.s0-form-table input[type="email"]:focus-visible,
+.s0-form-table textarea:focus-visible {
+  border-color: var(--s0-primary);
+  box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
+}
+
+button.s0-button {
+  display: inline-block;
+  min-width: 88px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5em;
+  background-color: var(--s0-primary);
+  color: white;
+  outline: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+button.s0-button:hover,
+button.s0-button:focus {
+  filter: brightness(0.9);
+  outline: 0;
+}
+
+button.s0-button:focus {
+  border: 1px solid var(--s0-primary);
+  box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
+}
+
+button.s0-button:disabled {
+  filter: brightness(0.5);
+  outline: 0;
+  border: none;
+  pointer-events: none;
 }
 
 .s0-mb-1 {
