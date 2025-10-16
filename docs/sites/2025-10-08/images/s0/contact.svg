@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+<title>Mail Icon</title>
+<metadata>{"creator":"seiya0","license":"All Rights Reserved","source":"https://github.com/seiya0-g"}</metadata>
+<rect width="64" height="64" fill="none"/>
+<g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<rect x="10" y="16" width="44" height="32" rx="3" />
+<path d="M10 18l22 16 22-16"/>
+</g>
+</svg>
