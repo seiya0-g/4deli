@@ -1,0 +1,30 @@
+:root {
+  --s0-primary: rgb(68, 51, 17);
+  --s0-primary-rgb: 68, 51, 17;
+  --s0-body-bg: #ffffff;
+  --s0-body-color: rgb(55, 46, 43);
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 img {
+  height: 56px;
+}
+
+section p {
+  margin-left: 1rem;
+}
+
+.s0-hero {
+  background-image: url("../images/header_back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-instagram {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 4px !important;
+}

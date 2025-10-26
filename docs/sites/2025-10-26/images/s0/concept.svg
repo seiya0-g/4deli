@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+<title>Concept Icon</title>
+<metadata>{"creator":"seiya0","license":"All Rights Reserved","source":"https://github.com/seiya0-g"}</metadata>
+<rect width="64" height="64" fill="none"/>
+<g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M48 16C32 16 16 32 16 48c16 0 32-16 32-32z"/>
+<path d="M32 32c0 8-8 16-8 16"/>
+</g>
+</svg>
