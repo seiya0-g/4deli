@@ -41,6 +41,14 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+header {
+  height: var(--s0-header-height);
+}
+
+header * {
+  max-height: var(--s0-header-height);
+}
+
 h1,
 h2,
 h3,
@@ -58,22 +66,12 @@ h1 {
   font-size: 2rem;
 }
 
-h1 img {
-  width: 48px;
-  height: 48px;
-  margin: 0.5rem;
-}
-
 h2 {
   font-size: 1.25rem;
 }
 
 h3 {
   font-size: 1.125rem;
-}
-
-section {
-  scroll-behavior: smooth;
 }
 
 h1[id],
@@ -84,6 +82,10 @@ h5[id],
 h6[id],
 section[id] {
   scroll-margin-top: var(--s0-header-height);
+}
+
+section {
+  scroll-behavior: smooth;
 }
 
 .s0-layout {
@@ -104,10 +106,44 @@ section[id] {
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   z-index: 100;
   background-color: var(--s0-body-bg);
+}
+
+.s0-layout>header h1 {
+  height: 100%;
+}
+
+.s0-layout>header h1 a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.s0-layout>header h1 a:link,
+.s0-layout>header h1 a:visited,
+.s0-layout>header h1 a:hover,
+.s0-layout>header h1 a:active {
+  color: var(--s0-body-color);
+}
+
+.s0-layout>header h1 a:focus-visible {
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
+}
+
+.s0-layout>header h1 a img {
+  max-height: calc(var(--s0-header-height) - 1rem);
+  margin: 0.5rem;
 }
 
 .s0-layout>nav {
@@ -150,9 +186,9 @@ section[id] {
   width: var(--s0-tap-size);
   height: var(--s0-tap-size);
   font-size: 12px;
+  cursor: pointer;
   outline: 0;
   text-decoration: none;
-  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -166,17 +202,20 @@ section[id] {
 }
 
 .s0-layout>nav>ul>li>a:focus-visible {
-  border: 1px solid var(--s0-primary);
   border-radius: 8px;
   box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
 }
 
-.s0-layout>nav>ul>li>a>img {
+.s0-layout>nav>ul>li>a>img,
+.s0-layout>nav>ul>li>a>div {
   position: absolute;
   top: 2px;
   padding: 0;
   width: 100%;
   height: calc(var(--s0-tap-size) - 18px);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s0-layout>nav>ul>li>a>span {
@@ -272,7 +311,6 @@ button.s0-button:focus {
 }
 
 button.s0-button:focus {
-  border: 1px solid var(--s0-primary);
   box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
 }
 
@@ -281,6 +319,19 @@ button.s0-button:disabled {
   outline: 0;
   border: none;
   pointer-events: none;
+}
+
+a.s0-a-icon {
+  outline: 0;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+a.s0-a-icon:focus-visible {
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(var(--s0-primary-rgb), 0.25);
 }
 
 .s0-mb-1 {

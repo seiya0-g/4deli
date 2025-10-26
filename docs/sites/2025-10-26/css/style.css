@@ -9,8 +9,12 @@ html {
   font-size: 16px;
 }
 
-h1 img {
-  height: 56px;
+h1 a {
+  height: 100%;
+}
+
+h1 a img {
+  height: 100%;
 }
 
 section p {
@@ -19,12 +23,42 @@ section p {
 
 .s0-hero {
   background-image: url("../images/header_back.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.img-instagram {
+.app-icon-instagram {
   width: 24px !important;
   height: 24px !important;
-  margin: 4px !important;
+  margin: 12px !important;
+  background-image: url('../images/instagram.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.app-icon-home {
+  background-image: url('../images/s0/home.svg');
+}
+
+.app-icon-about {
+  background-image: url('../images/s0/info.svg');
+}
+
+.app-icon-menu {
+  background-image: url('../images/s0/book.svg');
+}
+
+.app-icon-access {
+  background-image: url('../images/s0/pin.svg');
+}
+
+.app-icon-contact {
+  background-image: url('../images/s0/contact.svg');
+}
+
+
+@media (min-width: 768px) {
+  header {
+    justify-content: left !important;
+    gap: 24px !important;
+  }
 }
