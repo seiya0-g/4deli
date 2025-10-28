@@ -229,8 +229,11 @@ section {
   width: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   white-space: nowrap;
+  overflow: visible;
   font-size: 12px;
   font-weight: 700;
   z-index: 2;
@@ -306,7 +309,7 @@ a.s0-button {
   text-align: center;
   text-decoration: none;
   line-height: 1;
-  min-height: calc(44px - 1rem);
+  box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -370,6 +373,7 @@ a.s0-a-icon:focus-visible {
 
 .s0-hero {
   width: 100%;
+  height: calc(100vh - var(--s0-header-height) * 2);
   height: calc(100svh - var(--s0-header-height) * 2);
   background-size: cover;
   background-position: center;
@@ -467,12 +471,29 @@ a.s0-a-icon:focus-visible {
 
 .s0-video-area {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@supports not (aspect-ratio: 1/1) {
+  .s0-video-area {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+  }
+
+  .s0-video-area>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 input[name="_honey"] {
