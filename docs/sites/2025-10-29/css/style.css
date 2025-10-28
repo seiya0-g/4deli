@@ -17,6 +17,11 @@ h1 a img {
   height: 100%;
 }
 
+small {
+  display: inline-block;
+  line-height: 1;
+}
+
 .s0-line-title {
   margin-bottom: 1rem;
 }
@@ -24,6 +29,10 @@ h1 a img {
 .s0-section-body {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.s0-card {
+  margin-bottom: 1rem;
 }
 
 .s0-card>div {
@@ -63,6 +72,26 @@ h1 a img {
 
 .app-icon-contact {
   background-image: url('../images/s0/contact.svg');
+}
+
+.app-menu-table {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1;
+}
+
+.app-menu-table th,
+.app-menu-table td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.app-menu-table tr td:nth-child(2) {
+  width: 0;
+  text-align: right;
+  word-break: keep-all;
 }
 
 @media (min-width: 768px) {
