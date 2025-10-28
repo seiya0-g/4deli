@@ -17,8 +17,8 @@ h1 a img {
   height: 100%;
 }
 
-section p {
-  margin-left: 1rem;
+.s0-line-title {
+  margin-bottom: 1rem;
 }
 
 .s0-hero {
@@ -54,7 +54,6 @@ section p {
 .app-icon-contact {
   background-image: url('../images/s0/contact.svg');
 }
-
 
 @media (min-width: 768px) {
   header {
