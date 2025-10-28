@@ -516,6 +516,10 @@ input[name="_honey"] {
     flex-direction: row;
   }
 
+  .s0-card-pc-row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .s0-card>img {
     width: 50%;
   }
