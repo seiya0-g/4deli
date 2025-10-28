@@ -21,6 +21,16 @@ h1 a img {
   margin-bottom: 1rem;
 }
 
+.s0-section-body {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.s0-card>div {
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
 .s0-hero {
   background-image: url("../images/header_back.jpg");
 }

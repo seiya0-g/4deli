@@ -410,6 +410,7 @@ a.s0-a-icon:focus-visible {
 }
 
 .s0-section-body {
+  box-sizing: border-box;
   width: 100%;
   max-width: 760px;
   margin: 0 auto;
@@ -439,6 +440,29 @@ a.s0-a-icon:focus-visible {
   display: flex !important;
   justify-content: right !important;
   align-items: center !important;
+}
+
+.s0-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.s0-card>img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.s0-card>div {
+  box-sizing: border-box;
+  flex: 0 0 100%;
 }
 
 .s0-video-area {
@@ -486,6 +510,18 @@ input[name="_honey"] {
     top: 0;
     bottom: auto;
     width: 375px;
+  }
+
+  .s0-card {
+    flex-direction: row;
+  }
+
+  .s0-card>img {
+    width: 50%;
+  }
+
+  .s0-card>div {
+    flex: 0 0 50%;
   }
 
   .s0-hero {
