@@ -364,6 +364,14 @@ a.s0-a-icon:focus-visible {
   margin-bottom: 1rem !important;
 }
 
+.s0-mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.s0-mb-5 {
+  margin-bottom: 3rem !important;
+}
+
 .s0-container {
   width: 100%;
   max-width: 1320px;
