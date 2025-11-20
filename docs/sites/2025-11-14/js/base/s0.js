@@ -1,3 +1,9 @@
+/**
+ * s0.js v0.9.0
+ * © 2025 seiya0-g
+ * license: All Rights Reserved
+ * source: https://github.com/seiya0-g
+ */
 'use strict';
 (function () {
   if (document.readyState === 'loading') {
