@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true" role="img">
+<title>EAT-IN Icon</title>
+<metadata>{"creator":"seiya0","license":"All Rights Reserved","source":"https://github.com/seiya0-g"}</metadata>
+<rect width="64" height="64" fill="none"/>
+<g stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <!-- 皿 -->
+  <circle cx="32" cy="32" r="12"/>
+  <circle cx="32" cy="32" r="20"/>
+  <!-- フォーク -->
+  <path d="M12 14v14M16 14v14M14 14v36"/>
+  <!-- ナイフ -->
+  <path d="M52 14v40a2 2 0 0 1-2 2h-2V14z"/>
+</g>
+</svg>
